@@ -1,0 +1,13 @@
+ <div class="technologyContainer">
+  <h1 class="title">Technologies and Tools I've Worked With</h1>
+
+  <div class="technologyCardContainer">
+    <div *ngFor="let tech of technologyList; let i = index" class="technologyCard" mat-card>
+      <img [src]="tech.icon" alt="{{ tech.name }} icon">
+      <h3>{{ tech.name }}</h3>
+    </div>
+  </div>
+</div> 
+
+
+

@@ -1,0 +1,128 @@
+.eandeContainer {
+    max-width: 380px;
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    background-color: inherit;
+    position: relative;
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+
+
+  .timelineContainer {
+    width: 100%;
+    margin: 40px auto 0px auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: left;
+    justify-content: center;
+    background-color: inherit;
+  } 
+  .timelineContainer::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top:36px;
+  bottom: 0px;
+  max-height: 100%;
+  height: 450px;
+  width: 3px;
+  background-color: rgba(222, 226, 230);
+  z-index: 0; 
+}  
+  .timelineItem {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  background-color: inherit;
+}
+  .timelineBullet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 226, 230);
+    border-radius: 20%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+  } 
+  .timelineContent {
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 0px;
+    flex:1;
+  }
+
+  .timelineContent h2 {
+    margin: 0;
+    background-color: inherit;
+  }
+  
+  .dimmed {
+    color: #888888;
+  } 
+    
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablets / small screens */
+@media (max-width: 768px) {
+  .eandeContainer {
+    max-width: 100%;
+    margin-top: 40px; 
+  }
+
+  .timelineContainer::before {
+    left: 60px;  
+     max-height: 100%;
+    height: 610px;             
+  }
+
+  .timelineItem {
+    flex-direction: column;    /* stack bullet above content */
+    align-items: flex-start;
+    padding-left: 40px;
+  }
+
+  .timelineBullet {
+    margin-bottom: 10px;       /* space between bullet and content */
+  }
+
+  .timelineContent {
+    margin-left: 20px;
+  }
+}
+
+/* Mobile / extra small screens */
+@media (max-width: 480px) {
+  .timelineBullet {
+    width: 40px;
+    height: 40px;
+  }
+
+  .timelineContent {
+    padding: 5px;
+    margin-left: 25px;
+  }
+
+  .timelineContainer::before {
+    left: 60px;   
+    max-height: 100%;
+    height: 550px;
+                
+  }
+}
+
+
+

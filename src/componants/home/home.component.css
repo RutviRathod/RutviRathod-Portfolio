@@ -1,0 +1,218 @@
+/* .home {
+  width: 100%;
+  height: 100%;
+  max-width: auto;
+  margin: 0%;
+  background-color: white ;
+}
+.homeContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  background-color: white ;
+}
+.textContainer {
+  background-color: white ;
+  flex: 2;
+  padding: 50px;
+  margin-left: 150px;
+  margin-bottom: 20px;
+  padding-top: 100px;
+  h1 {
+    font-size: 50px;
+    margin: 20px;
+    font-weight: bold;
+    background-color: white ;
+  
+  }
+  h2 {
+    margin: 20px;
+    font-weight: 400;
+    font-size: 25px;
+    background-color: white ;
+  
+  }
+  h3 {
+    margin: 20px;
+    font-weight: 400;
+    font-size: 22px;
+    background-color: white ;
+  }
+}
+
+.imageContainer {
+  flex: 1.7;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: white ;
+  margin-right: 150px;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    margin-right: 250px;
+    background-color: white ;
+  
+  }
+}
+
+.iconContainer {
+  background-color: white ;
+  margin-top: 10px;
+  margin-left: -5px;
+  a {
+    background-color: white ;
+    display: inline-block;
+  }
+}
+.iconInnerContainer {
+  background-color: rgba(209, 205, 205, 0.223);
+  color: black;
+  margin-left: 30px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    margin-right: 5px;
+  }
+
+}
+@media only screen and (max-width: 850px) {
+  .textContainer {
+    padding: 30px;
+  }
+  .textContainer {
+    h1 {
+      font-size: 40px;
+      margin: 20px;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 20px;
+    }
+    h3 {
+      font-size: 20px;
+      margin: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 620px) {
+
+  .textContainer {
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+  .homeContainer {
+    flex-direction: column;
+  }
+} */
+
+.home {
+  width: 100%;
+  min-height: 90vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.homeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  padding-top: 20px;
+}
+
+/* Text Card */
+.textCard {
+  flex: 1 1 300px;
+  padding: 30px;
+  background-color: #f4f4f4;
+}
+
+.textCard h1 {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.textCard h2 {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.textCard h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 90px;
+}
+
+/* Icon Cards */
+.iconContainer {
+  display: flex;
+  gap: 25px;
+}
+
+.mat-card {
+  background-color: rgba(139, 133, 133, 0.076);
+  box-shadow: rgb(81, 76, 72);
+  border: darkolivegreen;
+  padding: 0;
+}
+
+.iconCard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: transform 0.2s;   
+}
+.textCard {
+  box-shadow: none;       
+  border: none;           
+  background-color: transparent; 
+  padding: 0;              
+}
+.iconCard:hover {
+  transform: scale(1.25);
+}
+/* Image Card */
+.imageCard {
+  flex: 1 1 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.imageCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .textCard h1 {
+    font-size: 40px;
+  }
+  .textCard h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 620px) {
+  .homeContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .textCard, .imageCard {
+    width: 90%;
+  }
+}

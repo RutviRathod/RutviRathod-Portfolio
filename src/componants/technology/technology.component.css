@@ -1,0 +1,80 @@
+.technologyContainer {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 200px;
+}
+.title {
+    margin: 100px 60px 40px 60px;
+    font-weight: bold;
+  }
+
+.technologyCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-left: -10px;
+}
+
+.technologyCard {
+    width: 140px;
+    margin: 5px;
+    padding: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    padding: 30px;
+    background-color: white;
+
+    :global {
+        .mantine-Card-cardSection {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+   
+}
+
+h3 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  background-color: white;
+}
+
+.technologyContainer {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  
+  
+  .technologyCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .technologyCard {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 3px 4px 5px rgba(106, 88, 88, 0.1);
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .technologyCard img {
+    object-fit: contain;
+    background-color: white;
+  } 

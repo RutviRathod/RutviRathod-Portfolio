@@ -1,0 +1,16 @@
+
+<div class="projectCardContainer">
+  <mat-card class="project-card">
+    <img mat-card-image [src]="imageUrl" alt="Portfolio project by Rutvi Rathod">
+    <mat-card-title class="title">{{ title }}</mat-card-title>
+      <div class="badgeContainer">
+        <div class="badge"
+           *ngFor="let tech of technologyUsed" color="black">{{ tech.name }}
+      </div>
+        </div>
+      <div class="shortDescription">
+        <p>{{ description }}</p>
+      </div>
+  </mat-card>
+</div>
+

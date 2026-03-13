@@ -1,0 +1,23 @@
+<div class="eandeContainer">
+  <h1 class="title">Experience and Education</h1>
+  <div class="timelineContainer">
+    <div *ngFor="let item of timelineItems" class="timelineItem">
+      <div class="timelineBullet">
+        <mat-icon>{{ item.icon }}</mat-icon>
+      </div>
+      <div class="timelineContent">
+        <h2>{{ item.title }}</h2>
+        <p class="dimmed">{{ item.organization }}</p>
+        <p>{{ item.date }}</p>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+
+
+
+
+
+

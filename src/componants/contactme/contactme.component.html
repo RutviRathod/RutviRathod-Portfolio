@@ -1,0 +1,49 @@
+<div class="contact-container">
+  <h1 class="title">Let's Connect!</h1>
+
+  <div class="contactForm" *ngIf="!succeeded; else successMessage">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-icon matPrefix>person</mat-icon>
+        <mat-label>Name</mat-label>
+        <input matInput  placeholder="Name" formControlName ="name" required>
+        <mat-error *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-icon matPrefix>email</mat-icon>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email" required>
+        <mat-error *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">Invalid email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width" color="black">
+        <mat-icon matPrefix>subject</mat-icon>
+        <mat-label>Subject</mat-label>
+        <input matInput placeholder="Subject" formControlName="subject" required>
+        <mat-error *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched">Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-icon matPrefix>message</mat-icon>
+        <mat-label>Message</mat-label>
+        <textarea matInput placeholder="Message" formControlName="message" required rows="4"></textarea>
+        <mat-error *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">Required</mat-error>
+      </mat-form-field>
+
+      <div class="center">
+        <button mat-raised-button type="submit" [disabled]="submitting">Send</button>
+      </div>
+    </form>
+    
+  </div> 
+ <ng-template #successMessage>
+  <div class="success-box">
+    <mat-icon color="primary">check_circle</mat-icon>
+    <p>Your message was sent successfully!</p>
+  </div>
+</ng-template>
+</div> 
+ 
+
+
